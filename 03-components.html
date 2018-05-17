@@ -1,0 +1,50 @@
+<div id="root"></div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+<script type="text/babel">
+const rootElement = document.getElementById('root')
+
+// arrow function
+// const message = (props) => <div>{props.msg}</div>
+
+// Reference use capital.
+const Message = (props) => <div>{props.msg}</div>
+
+
+// const helloWorld = <div>Hello World</div>
+
+// JSX
+// const element = (
+//     <div className="container">
+//     {helloWorld}
+//     {helloWorld}
+//     </div>
+// )
+
+// reuse the function with props
+// const element = (
+// <div className="container">
+//     {message({msg: "Hello World"})} {message({msg: "Goodbye World"})}
+// </div>
+// )
+
+// reuse React components
+// const element = (
+//     <div className="container">
+//         {React.createElement(message, {msg: "Hello World"})}
+//         {React.createElement(message, {msg: "Goodbye World"})}
+//     </div>
+// )
+
+// reuse JSX
+const element = (
+<div className="container">
+    <Message msg="Hello World" />
+    <Message msg="Goodbye World" />
+</div>
+)
+
+ReactDOM.render(element, rootElement)
+</script>
