@@ -1,0 +1,27 @@
+<div id="root"></div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+<script type="text/babel">
+const rootElement = document.getElementById('root')
+// const element = React.createElement('div', {className: 'container', children: 'hello world'})
+const content = 'Hello World'
+const myClassName = 'container'
+const props = {
+    className: 'container',
+    children: 'Hello World',
+}
+// const element = <div className={myClassName + '__hello'}>{(() => content)()}</div> // JSX
+
+// uses props
+// const element = <div {...props} />
+
+// override the className
+// const element = <div {...props} className='myClass'/> 
+
+// override the children
+const element = <div {...props}>Hi there</div>
+
+ReactDOM.render(element, rootElement)
+</script>
